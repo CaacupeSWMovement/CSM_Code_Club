@@ -1,0 +1,17 @@
+Editor
+https://www.sublimetext.com/3
+Instalar Complementos
+https://packagecontrol.io/installation
+* Emmet
+* ColorPicker
+
+Diseño y maquetación Web
+* https://getbootstrap.com/
+* https://www.w3schools.com/bootstrap/default.asp
+
+Javascript
+* https://www.w3schools.com/js/default.asp
+
+HTML Storage
+* https://www.w3schools.com/html/html5_webstorage.asp
+* https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web

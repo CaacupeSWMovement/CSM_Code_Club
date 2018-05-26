@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Storage</title>
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- CSS de Boostrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<!-- JS -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+	<div class="jumbotron">
+	  <h1 style="text-align: center;">Agenda de Contactos</h1>      
+	  <p>Esto es una agenda de contactos</p>
+
+	</div>
+
+	<div class="container">
+	  	<div class="row">
+			  <div class="col-xs-7 col-sm-6 col-lg-8">
+			  	<p>Ingrese el nombre de Contacto:</p>
+			  </div>
+			  <div class="col-xs-5 col-sm-6 col-lg-4">
+			  	<input type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre" />
+			  </div>
+			   <div class="col-xs-7 col-sm-6 col-lg-8">
+			  	<p>Ingrese el numero de contacto:</p>
+			  </div>
+			  <div class="col-xs-5 col-sm-6 col-lg-4">
+			  	<input type="text" id="contacto" placeholder="Ingrese contacto" />
+			  </div>
+			  
+		</div>    
+		<div class="row">
+			<button type="button" onclick="Guardar()" style="margin: auto;" class="btn btn-success">Guardar</button>
+		</div>
+		<div class="row">
+			<button type="button" onclick="Mostrar()" style="margin: auto;" class="btn btn-danger">Mostrar</button>
+		</div>
+		<p id="show"></p>
+	</div>
+	
+	<script>
+		function Guardar(){
+			localStorage.nombre = document.getElementById("nombre").value;
+
+			localStorage.contacto = document.getElementById("contacto").value;	
+
+			document.getElementById("nombre").value = "";	
+			document.getElementById("contacto").value = "";	
+		}
+		function Mostrar(){
+			if ((localStorage.nombre != undefined) && (localStorage.contacto != undefined)) {
+        		document.getElementById("show").innerHTML = "Nombre: " + localStorage.nombre + "Contacto: " + localStorage.contacto;
+    		} else {
+        		document.getElementById("show").innerHTML = "No has introducido ningun dato";
+    		}
+		}
+	</script>
+
+</body>
+</html>
