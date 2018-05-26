@@ -2,7 +2,7 @@
 
 $nombre = $_POST['nombre']; 
 
-$con = mysqli_connect('localhost','root','user','CSM');
+$con = mysqli_connect('localhost','root','','CSM');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }

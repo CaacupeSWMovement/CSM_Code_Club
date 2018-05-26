@@ -4,7 +4,7 @@ $nombre = $_POST['nombre'];
 $contacto = $_POST['contacto'];
 $direccion = $_POST['direccion'];
 
-$con = mysqli_connect('localhost','root','user','CSM');
+$con = mysqli_connect('localhost','root','','CSM');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
